@@ -9,10 +9,11 @@ export function renderLayers(props) {
     data: data,
     //直交座標系に変更する
     coordinateSystem: COORDINATE_SYSTEM.CARTESIAN,
+    getPosition: d => d.position || [0, 0, 0],
     getNormal: [0, 1, 0],
     getColor: [255, 255, 255],
     opacity: 0.5,
-    pointSize: 1
+    pointSize: 2
   });
 
   return [layer];
